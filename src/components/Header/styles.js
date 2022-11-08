@@ -1,12 +1,15 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  & > img {
+    width: 100%;    
+    height: 23rem;
+  }
   .user-info {
     display: flex;
     align-items: center;
     gap: 1.1rem;
     padding: 1.6rem;
-    margin-top: 5rem;
   }
 
   .user-info img {

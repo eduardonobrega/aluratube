@@ -1,9 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledTimeline = styled.div`
   flex: 1;
   width: 100%;
-  padding: 16px;
   overflow: hidden;
   h2 {
     font-size: 16px;
@@ -18,19 +17,48 @@ export const StyledTimeline = styled.div`
     max-width: 210px;
     height: auto;
   }
+
+  & > h2 {
+    padding-left: 1.6rem;
+    margin-bottom: 0;
+  } 
+
+  .aluraTubes_fav {
+    display: flex;
+    gap: 0.8rem;
+    padding: 1.6rem;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.8rem;
+
+      img {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+      }
+    }
+  }
   section {
     width: 100%;
     padding: 0;
     overflow: hidden;
     padding: 16px;
     div {
-      
       width: calc(100vw - 16px * 4);
       display: grid;
       grid-gap: 16px;
-      grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       grid-auto-flow: column;
-      grid-auto-columns: minmax(200px,1fr);
+      grid-auto-columns: minmax(200px, 1fr);
       overflow-x: scroll;
       scroll-snap-type: x mandatory;
       a {
@@ -39,7 +67,7 @@ export const StyledTimeline = styled.div`
           padding-top: 8px;
           display: block;
           padding-right: 24px;
-          color: ${({ theme }) => theme.textColorBase || "#222222"};
+          color: ${({ theme }) => theme.textColorBase || '#222222'};
         }
       }
     }
